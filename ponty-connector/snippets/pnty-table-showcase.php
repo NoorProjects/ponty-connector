@@ -31,7 +31,7 @@
         <?php global $post;?>
         <?php foreach($jobs as $post): setup_postdata($post); ?>
             <?php if($excerpt_title):?>
-                <tr title="<?php echo $post->post_excerpt;?>">
+                <tr title="<?php echo esc_attr(str_replace(["\r\n", "\n"], ' ', $post->post_excerpt)); ?>">
                     <td><?php the_title();?></td>
             <?php else:?>
                 <tr>
