@@ -41,7 +41,7 @@
                     <span class="pnty-list-location"><?php echo $metadata['_pnty_location'][0];?></span>
                 <?php endif; ?>
                 <?php if ($excerpt): ?>
-                    <p class="pnty-list-excerpt"><?php echo get_the_excerpt();?></p>
+                    <p class="pnty-list-excerpt"><?php echo str_replace("\n", "<br />", get_the_excerpt()); ?></p>
                 <?php endif; ?>
             </li>
         <?php endforeach; wp_reset_postdata();?>
