@@ -46,7 +46,7 @@
                     <span class="pnty-list-location"><?php echo $metadata['_pnty_location'][0];?></span>
                 <?php endif; ?>
                 <?php if ($excerpt): ?>
-                    <p class="pnty-list-excerpt"><?php echo get_the_excerpt();?></p>
+                    <p class="pnty-list-excerpt"><?php echo str_replace("\n", "<br />", get_the_excerpt()); ?></p>
                 <?php endif; ?>
                 <?php if ($readmore): ?>
                     <p class="pnty-list-readmore"><a href="<?php echo get_permalink($post->ID);?>"><?php echo $readmore;?></a></p>
